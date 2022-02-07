@@ -1,7 +1,7 @@
 const siteMetadata = {
   title: "Norman Wong's Personal Website",
   author: 'Norman Wong Chiew Look',
-  headerTitle: 'NormanWongBlog',
+  headerTitle: 'normanwongcl.com',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
@@ -11,11 +11,8 @@ const siteMetadata = {
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'nich19032@outlook.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  github: 'https://github.com/normanwongcl',
+  linkedin: 'https://www.linkedin.com/in/normanwongcl/',
   locale: 'en-US',
   analytics: {
     // supports plausible, simpleAnalytics, umami or googleAnalytics
