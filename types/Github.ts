@@ -44,7 +44,3 @@ export type GraphData = {
     }
   }
 }
-
-type PageviewsData = {
-  pageviews: number
-}
