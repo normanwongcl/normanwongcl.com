@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-graph-L: #cccccc;
+    --color-graph-L0: #ebedf0;
+    --color-graph-L1: #9be9a8;
+    --color-graph-L2: #40c463;
+    --color-graph-L3: #30a14e;
+    --color-graph-L4: #216e39;
+  }
+
+  .dark {
+    --color-graph-L: #464d53;
+    --color-graph-L0: #1f2429;
+    --color-graph-L1: #003820;
+    --color-graph-L2: #00602d;
+    --color-graph-L3: #10983d;
+    --color-graph-L4: #27d545;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-graph-L: #464d53;
+    --color-graph-L0: #1f2429;
+    --color-graph-L1: #003820;
+    --color-graph-L2: #00602d;
+    --color-graph-L3: #10983d;
+    --color-graph-L4: #27d545;
+  }
+
+  .light {
+    --color-graph-L: #cccccc;
+    --color-graph-L0: #ebedf0;
+    --color-graph-L1: #9be9a8;
+    --color-graph-L2: #40c463;
+    --color-graph-L3: #30a14e;
+    --color-graph-L4: #216e39;
+  }
+}
+
 .task-list-item::before {
   @apply hidden;
 }
@@ -11,7 +51,7 @@
 }
 
 .footnotes {
-  @apply pt-8 mt-12 border-t border-gray-200 dark:border-gray-700;
+  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
 }
 
 .csl-entry {
@@ -22,4 +62,28 @@
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+[data-level='-1'] {
+  fill: var(--color-graph-L);
+}
+
+[data-level='0'] {
+  fill: var(--color-graph-L0);
+}
+
+[data-level='1'] {
+  fill: var(--color-graph-L1);
+}
+
+[data-level='2'] {
+  fill: var(--color-graph-L2);
+}
+
+[data-level='3'] {
+  fill: var(--color-graph-L3);
+}
+
+[data-level='4'] {
+  fill: var(--color-graph-L4);
 }

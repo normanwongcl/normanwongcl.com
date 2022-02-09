@@ -20,4 +20,4 @@ This a personal blog and portfolio website made with [Next.js](https://nextjs.or
 
 ## Extended features
 
-- To be added
+- Added visualization for data fetched from Github API.
