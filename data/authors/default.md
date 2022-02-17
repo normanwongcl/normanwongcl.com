@@ -2,7 +2,7 @@
 name: Norman Wong Chiew Look
 avatar: /static/images/norman.jpg
 occupation: Web Developer / IT Support
-company: GEM Consultancy
+company: GEM Consultancy Sdn Bhd
 email: nich19032@outlook.com
 linkedin: https://www.linkedin.com/in/normanwongcl
 github: https://github.com/normanwongcl
