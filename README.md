@@ -1,77 +1,24 @@
-# PlanetScale CLI [![Build status](https://badge.buildkite.com/cf225eb6ccc163b365267fd8172a6e5bd9baa7c8fcdd10c77c.svg?branch=main)](https://buildkite.com/planetscale/cli)
+## Intro
 
-PlanetScale is more than a database and our CLI is more than a jumble of commands. The `pscale` command line tool brings branches, deploy requests, and other PlanetScale concepts to your fingertips.
+This a personal blog and portfolio website made with [Next.js](https://nextjs.org/) & [Tailwind CSS](https://tailwindcss.com/), adapted from [Timothy Lin's](https://www.timlrx.com) Next.js Starter Template which took inspiration from [Lee Robinson's](https://www.leerob.io) now infamous Next.js blog.
 
-![PlanetScale CLI](https://user-images.githubusercontent.com/155044/118568235-66c8e380-b745-11eb-8124-5a72e17f7f7b.png)
+## Original features in template
 
-## Installation
+- Easy styling customization with [Tailwind 3.0](https://blog.tailwindcss.com/tailwindcss-v2)
+- Near perfect lighthouse score - [Lighthouse report](https://www.webpagetest.org/result/210111_DiC1_08f3670c3430bf4a9b76fc3b927716c5/)
+- Lightweight, 43kB first load JS, uses Preact in production build
+- Mobile-friendly view
+- Light and dark theme
+- [MDX - write JSX in markdown documents!](https://mdxjs.com/)
+- Server-side syntax highlighting with [rehype-prism](https://github.com/mapbox/rehype-prism)
+- Math display supported via [KaTeX](https://katex.org/)
+- Automatic image optimization via [next/image](https://nextjs.org/docs/basic-features/image-optimization)
+- Flexible data retrieval with [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote)
+- Support for tags - each unique tag will be its own page
+- Projects page
+- SEO friendly with RSS feed, sitemaps and more!
 
-#### macOS
+## Extended features
 
-`pscale` is available via a Homebrew Tap, and as downloadable binary from the [releases](https://github.com/planetscale/cli/releases/latest) page:
-
-```
-brew install planetscale/tap/pscale
-```
-
-Optional: `pscale` requires the MySQL Client for certain commands. You can install it by running:
-
-```
-brew install mysql-client
-```
-
-To upgrade to the latest version:
-
-```
-brew upgrade pscale
-```
-
-#### Linux
-
-`pscale` is available as downloadable binaries from the [releases](https://github.com/planetscale/cli/releases/latest) page. Download the .deb or .rpm from the [releases](https://github.com/planetscale/cli/releases/latest) page and install with `sudo dpkg -i` and `sudo rpm -i` respectively.
-
-#### Windows
-
-`pscale` is available via [scoop](https://scoop.sh/), and as a downloadable binary from the [releases](https://github.com/planetscale/cli/releases/latest) page:
-
-```
-scoop bucket add pscale https://github.com/planetscale/scoop-bucket.git
-scoop install pscale mysql
-```
-
-To upgrade to the latest version:
-
-```
-scoop update pscale
-```
-
-#### Manually
-
-Download the pre-compiled binaries from the [releases](https://github.com/planetscale/cli/releases/latest) page and copy to the desired location.
-
-#### Container images
-
-We provide ready to use Docker container images. To pull the latest image:
-
-```
-docker pull planetscale/pscale:latest
-```
-
-To pull a specific version:
-
-```
-docker pull planetscale/pscale:v0.63.0
-```
-
-If you like to have a shell alias that runs the latest version of pscale from docker whenever you type `pscale`:
-
-```
-mkdir -p $HOME/.config/planetscale
-alias pscale="docker run -e HOME=/tmp -v $HOME/.config/planetscale:/tmp/.config/planetscale --user $(id -u):$(id -g) --rm -it -p 3306:3306/tcp planetscale/pscale:latest"
-```
-
-If you need a more advanced example that works with service tokens and differentiates between commands that need a pseudo terminal or non-interactive mode, [have a look at this shell function](https://github.com/jonico/pscale-cli-helper-scripts/blob/main/.pscale/cli-helper-scripts/use-pscale-docker-image.sh).
-
-## Documentation
-
-Please checkout our Documentation page: [docs.planetscale.com](https://docs.planetscale.com/reference/planetscale-cli/)
+- Added visualization for data fetched from Github API.
+- Added views counter to count number of views from individual blog posts
