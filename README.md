@@ -18,7 +18,7 @@ This a personal blog and portfolio website made with [Next.js](https://nextjs.or
 - Projects page
 - SEO friendly with RSS feed, sitemaps and more!
 
-## Extended features
+## Extended features (Not avalaible in template)
 
 - Added visualization for data fetched from Github API.
 - Added views counter to count number of views from individual blog posts
