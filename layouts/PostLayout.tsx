@@ -6,6 +6,7 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
+import ViewCounter from '@/components/ViewCounter'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { ReactNode } from 'react'
 import { PostFrontMatter } from 'types/PostFrontMatter'
@@ -55,6 +56,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
                   </dd>
+                  <ViewCounter slug={slug} />
                 </div>
               </dl>
               <div>
