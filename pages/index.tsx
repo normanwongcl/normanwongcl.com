@@ -22,15 +22,31 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <Repos />
-      <Graph />
+      <div className="space-y-2 pt-12 pb-8 md:space-y-5">
+        <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+          <span className="block"> Hi there 👋, </span>
+          <span className="block bg-gradient-to-r from-green-700 to-green-500 bg-clip-text pb-3 text-transparent dark:from-green-200 dark:to-green-400 sm:pb-5">
+            I'm Norman Wong Chiew Look
+          </span>
+        </h1>
+        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+          {siteMetadata.description}
+        </p>
+      </div>
+      <div className="space-y-2 pt-8 pb-8 md:space-y-5">
+        <h2 className="mt-2 mb-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          My contribution to the community
+        </h2>
+        <Repos />
+        <Graph />
+      </div>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-12 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h2 className="mt-2 mb-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Latest
-          </h1>
+          </h2>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            My most recent blog posts
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -50,14 +66,14 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                     <div className="space-y-5 xl:col-span-3">
                       <div className="space-y-6">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                          <h3 className="text-2xl font-bold leading-8 tracking-tight">
                             <Link
                               href={`/blog/${slug}`}
                               className="text-gray-900 dark:text-gray-100"
                             >
                               {title}
                             </Link>
-                          </h2>
+                          </h3>
                           <div className="flex flex-wrap">
                             {tags.map((tag) => (
                               <Tag key={tag} text={tag} />
@@ -94,11 +110,6 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           >
             All Posts &rarr;
           </Link>
-        </div>
-      )}
-      {siteMetadata.newsletter.provider !== '' && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
         </div>
       )}
     </>
