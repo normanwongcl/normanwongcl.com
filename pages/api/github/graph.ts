@@ -23,7 +23,7 @@ const query = `{
 }`
 
 /* eslint-disable import/no-anonymous-default-export */
-export default async (_: NextApiRequest, res: NextApiResponse<GraphData>): Promise<void> => {
+export default async (req: NextApiRequest, res: NextApiResponse<GraphData>): Promise<void> => {
   const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
