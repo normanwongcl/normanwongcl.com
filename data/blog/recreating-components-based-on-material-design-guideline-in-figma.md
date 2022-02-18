@@ -4,7 +4,7 @@ date: '2022-02-18'
 lastmod: '2022-02-18'
 tags: ['figma', 'material design', 'web design']
 draft: false
-summary: Using ruler and rectangle width and height to measure web dp unit in Figma
+summary: Using ruler and rectangle width and height to measure dp unit in Figma
 authors: ['default']
 ---
 
