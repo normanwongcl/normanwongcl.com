@@ -30,7 +30,7 @@ All the numbers specify the width and height of elements in the components using
 
 ![Measuring dp with rectangle shape in Figma](/static/images/using-rectangle-shape-as-a-ruler.png)
 
-Example as illustrasted below:
+Example as illustrated below:
 
 ![Measurement in figma](/static/images/figma-card-measurement-demo.png)
 
