@@ -1,7 +1,7 @@
 ---
 title: '2021: My first year in my first full time job - a personal reflection'
-date: '2022-02-18'
-lastmod: '2022-02-18'
+date: '2022-02-20'
+lastmod: '2022-02-20'
 tags: ['career', 'personal-reflection', 'growth']
 draft: false
 summary: Using ruler and rectangle width and height to measure dp unit in Figma
