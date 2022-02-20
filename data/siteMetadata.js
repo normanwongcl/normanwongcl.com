@@ -3,7 +3,7 @@ const siteMetadata = {
   author: 'Norman Wong Chiew Look',
   headerTitle: 'normanwongcl.com',
   description:
-    'I am a Malaysian web developer focusing on React.js, Next.js, JavaScript and TypeScript. I have 2+ years work experience in various IT roles in start-ups and small to medium organisations. I have a strong passion for learning and I am always looking to improve my skills.',
+    'I am a Malaysian web developer focusing on React.js, Next.js, JavaScript and TypeScript. I have 2+ years work experience in various IT roles in start-ups and small to medium organisations. My goal right now is to improve my craft and build quality software applications.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://normanwongcl.com',
