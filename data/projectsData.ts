@@ -12,13 +12,13 @@ const projectsData = [
   },
   {
     title: 'Cloud Infrastructures for Treiner',
-    description: `Automated deployment pipeline and cloud infrastructure for supporting the Treiner web application`,
+    description: `Automated deployment pipeline and cloud infrastructure for supporting a web application under Treiner, an early-stage start-up in Melbourne`,
     imgSrc: '/static/images/treiner-example-demo.jpg',
     href: 'https://treiner.co',
   },
   {
     title: 'Cloud Infrastructures for Shifra',
-    description: `Automated deployment pipeline and cloud infrastructure for supporting the Shifra web application`,
+    description: `Automated deployment pipeline and cloud infrastructure for supporting a website under Shifra, an early-stage start-up in Melbourne`,
     imgSrc: '/static/images/shifra-example-demo.jpg',
     href: 'https://shifra.app/en',
   },
