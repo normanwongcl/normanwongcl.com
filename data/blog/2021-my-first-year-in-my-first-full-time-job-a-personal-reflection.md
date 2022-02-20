@@ -63,7 +63,7 @@ It's February 2022 right now, and the product is almost ready to be used by the 
 
 I am proud that I have went from not knowing web design and only having basic knowledge in frontend and backend development to being able to start 2 web projects from scratch all the way to completion.
 
-I've also become pretty invested in the JavaScript ecosystem which I have using for the past year, and look forward to deepening my knowledge in this area as I continue my career.
+I've also become pretty invested in the JavaScript ecosystem which I have been using for the past year, and look forward to deepening my knowledge in this area as I continue my career.
 
 Goodbye. 👋
 
