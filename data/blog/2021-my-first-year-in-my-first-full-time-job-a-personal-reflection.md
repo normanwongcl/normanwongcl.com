@@ -4,7 +4,7 @@ date: '2022-02-20'
 lastmod: '2022-02-20'
 tags: ['career', 'personal-reflection', 'growth']
 draft: false
-summary: My personal reflection on my first year in my first full time job
+summary: My learning and growth as a developer in my first full time job.
 authors: ['default']
 ---
 
