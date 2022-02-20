@@ -4,7 +4,7 @@ date: '2022-02-20'
 lastmod: '2022-02-20'
 tags: ['career', 'personal-reflection', 'growth']
 draft: false
-summary: Using ruler and rectangle width and height to measure dp unit in Figma
+summary: My personal reflection on my first year in my first full time job
 authors: ['default']
 ---
 
