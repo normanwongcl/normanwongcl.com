@@ -1,19 +1,26 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Pinnacles web application',
+    description: `A web application under a subsidiary company of GEM Consultancy, for participants to book and pay for training courses and events.`,
+    imgSrc: '/static/images/pinnacles-banner.png',
+    href: 'https://pinnacles.app',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Ko-Latih website',
+    description: `A community blog / event listing website for a newly established koperasi / co-operative, Ko-Latih. (Website no longer being maintained)`,
+    imgSrc: '/static/images/ko-latih-banner.png',
+  },
+  {
+    title: 'Cloud Infrastructures for Treiner',
+    description: `Automated deployment pipeline and cloud infrastructure for supporting the Treiner web application`,
+    imgSrc: '/static/images/treiner-example-demo.jpg',
+    href: 'https://treiner.co',
+  },
+  {
+    title: 'Cloud Infrastructures for Shifra',
+    description: `Automated deployment pipeline and cloud infrastructure for supporting the Shifra web application`,
+    imgSrc: '/static/images/shifra-example-demo.jpg',
+    href: 'https://shifra.app/en',
   },
 ]
 
