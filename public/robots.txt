@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /api/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.normanwongcl.com/sitemap.xml
