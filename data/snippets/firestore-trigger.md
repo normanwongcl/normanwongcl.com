@@ -11,7 +11,7 @@ authors: ['default']
 
 # Introduction
 
-Here's a scenario where this snippet is useful.
+Here's a scenario where this code snippet is useful.
 
 Let's said that you have a few users, who had booked "ABC Training" on your website. "ABC Training" data came from a product document in the "products" collection, and the new booking data is stored in a collection called "bookingHistory".
 
