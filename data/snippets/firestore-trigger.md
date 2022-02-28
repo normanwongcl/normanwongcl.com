@@ -21,7 +21,7 @@ Now, your "ABC Training" product in your products document have the **new data**
 
 But your users still have **stale data** (old data) in their "bookingHistory" collection.
 
-In order to update all of the booking data that have "ABC Training", you need a write a cloud function to watch for an "update" event on the "products" collection.
+In order to update all of the user bookings for "ABC Training", you need a write a cloud function to watch for an "update" event on the "products" collection.
 
 This code snippet can be customized to use a different collection and update multiple documents of whatever collection you want.
 
