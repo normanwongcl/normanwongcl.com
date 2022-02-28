@@ -25,7 +25,7 @@ const BlogPost = (post: PostFrontMatter) => {
           <div className="flex flex-col justify-between md:flex-row">
             <h3 className="text-2xl font-bold leading-8 tracking-tight">
               <Link href={`/blog/${slug}`} passHref>
-                <h1 className="text-gray-900 dark:text-gray-100"> {title}</h1>
+                <p className="text-gray-900 dark:text-gray-100"> {title}</p>
               </Link>
             </h3>
             <p className="mb-4 w-32 text-left text-gray-500 md:mb-0 md:text-right">
