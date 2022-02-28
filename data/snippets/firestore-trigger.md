@@ -15,7 +15,7 @@ Here's a scenario where this code snippet is useful.
 
 Let's said that you have a few users, who had booked "ABC Training" on your website. "ABC Training" data came from a product document in the "products" collection, and the new booking data is stored in a collection called "bookingHistory".
 
-Your admin recently decided to update "ABC Training" course starting and ending dates.
+Your admin recently decided to update "ABC Training" course's starting date and ending date.
 
 Now, your "ABC Training" product in your products document have the **new data** entered by the admin.
 
