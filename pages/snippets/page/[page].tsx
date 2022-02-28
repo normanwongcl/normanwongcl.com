@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<{
   const {
     params: { page },
   } = context
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('snippets')
   const pageNumber = parseInt(page as string)
   const initialDisplayPosts = posts.slice(
     POSTS_PER_PAGE * (pageNumber - 1),
