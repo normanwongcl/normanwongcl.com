@@ -19,7 +19,7 @@ Your admin recently decided to update "ABC Training" course's starting date and 
 
 Now, your "ABC Training" product in your products document have the **new data** entered by the admin.
 
-But your users still have **stale data** in their "bookingHistory" collection.
+But your users still have **stale data** (old data) in their "bookingHistory" collection.
 
 In order to update all of the booking data that have "ABC Training", you need a write a cloud function to watch for an "update" event on the "products" collection.
 
