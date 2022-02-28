@@ -1,4 +1,4 @@
-import BlogPost from '@/components/BlogPost'
+import Post from '@/components/GenericPost'
 import { ComponentProps, useState } from 'react'
 import Pagination from '@/components/Pagination'
 import { PostFrontMatter } from 'types/PostFrontMatter'
@@ -57,7 +57,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             const { slug } = frontMatter
             return (
               <li key={slug} className="py-4">
-                <BlogPost key={slug} {...frontMatter} />
+                <Post key={slug} {...frontMatter} />
               </li>
             )
           })}

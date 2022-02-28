@@ -3,6 +3,7 @@ title: '2021: My first year in my first full time job - a personal reflection'
 date: '2022-02-20'
 lastmod: '2022-02-20'
 tags: ['career', 'personal-reflection', 'growth']
+category: 'blog'
 draft: false
 summary: My learning and growth as a developer in the first year of my first full time job.
 authors: ['default']

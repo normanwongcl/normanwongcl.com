@@ -1,13 +1,10 @@
 import Link from '@/components/Link'
-import BlogPost from '@/components/BlogPost'
+import Post from '@/components/GenericPost'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
-import NewsletterForm from '@/components/NewsletterForm'
 import Repos from '@/components/github/Repos'
 import Graph from '@/components/github/Graph'
 
@@ -56,7 +53,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             const { slug } = frontMatter
             return (
               <li key={slug} className="py-12">
-                <BlogPost key={slug} {...frontMatter} />
+                <Post key={slug} {...frontMatter} />
               </li>
             )
           })}

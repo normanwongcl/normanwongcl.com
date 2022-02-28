@@ -7,8 +7,8 @@ import Tag from '@/components/Tag'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import { Views } from 'types/Views'
 
-const BlogPost = (post: PostFrontMatter) => {
-  const { slug, date, title, summary, tags } = post
+const GenericPost = (post: PostFrontMatter) => {
+  const { slug, date, title, category, summary, tags } = post
   const { data } = useSWR<Views>(`/api/views/${slug}`, fetcher)
   const views = data?.total
 
@@ -23,8 +23,8 @@ const BlogPost = (post: PostFrontMatter) => {
       <div className="space-y-3 xl:col-span-3">
         <div>
           <div className="flex flex-col justify-between md:flex-row">
-            <h3 className="text-2xl font-bold leading-8 tracking-tight">
-              <Link href={`/blog/${slug}`} passHref>
+            <h3 className="text-2xl font-bold leading-8 tracking-tight hover:cursor-pointer">
+              <Link href={`/${category}/${slug}`} passHref>
                 <p className="text-gray-900 dark:text-gray-100"> {title}</p>
               </Link>
             </h3>
@@ -45,4 +45,4 @@ const BlogPost = (post: PostFrontMatter) => {
   )
 }
 
-export default BlogPost
+export default GenericPost

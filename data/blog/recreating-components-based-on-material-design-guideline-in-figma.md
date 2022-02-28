@@ -3,6 +3,7 @@ title: Recreating components based on Material Design specification in Figma
 date: '2022-02-18'
 lastmod: '2022-02-18'
 tags: ['figma', 'material design', 'web design']
+category: 'blog'
 draft: false
 summary: Using ruler and rectangle width and height to measure dp unit in Figma
 authors: ['default']
