@@ -1,7 +1,7 @@
 ---
 title: 'Firestore trigger'
-date: '2022-02-28'
-lastmod: '2022-02-28'
+date: '2022-03-1'
+lastmod: '2022-03-1'
 tags: ['javascript', 'firestore', 'firebase']
 category: 'snippets'
 draft: false
