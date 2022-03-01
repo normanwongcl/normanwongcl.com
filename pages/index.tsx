@@ -2,7 +2,7 @@ import Link from '@/components/Link'
 import Post from '@/components/GenericPost'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { dateSortDesc, getAllFilesFrontMatter } from '@/lib/mdx'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import Repos from '@/components/github/Repos'
@@ -11,9 +11,11 @@ import Graph from '@/components/github/Graph'
 const MAX_DISPLAY = 5
 
 export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[] }> = async () => {
-  const posts = await getAllFilesFrontMatter('blog')
-
-  return { props: { posts } }
+  const blogPosts = await getAllFilesFrontMatter('blog')
+  const snippetsPosts = await getAllFilesFrontMatter('snippets')
+  const allPosts = [...blogPosts, ...snippetsPosts]
+  const sortedPosts = allPosts.sort((a, b) => dateSortDesc(a.date, b.date))
+  return { props: { posts: sortedPosts } }
 }
 
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
@@ -43,9 +45,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           <h2 className="mt-2 mb-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Latest
           </h2>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            My most recent blog posts
-          </p>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">My most recent posts</p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
