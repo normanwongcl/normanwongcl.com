@@ -11,10 +11,11 @@ import { ReactNode } from 'react'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
 
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
-const discussUrl = (slug) =>
+const editUrl = (fileName, category) =>
+  `${siteMetadata.siteRepo}/blob/master/data/${category}/${fileName}`
+const discussUrl = (slug, category) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `${siteMetadata.siteUrl}/blog/${slug}`
+    `${siteMetadata.siteUrl}/${category}/${slug}`
   )}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
@@ -41,12 +42,12 @@ export default function PostLayout({
   viewCounter,
   children,
 }: Props) {
-  const { slug, fileName, date, title, tags } = frontMatter
+  const { slug, fileName, date, title, category, tags } = frontMatter
 
   return (
     <SectionContainer>
       <BlogSEO
-        url={`${siteMetadata.siteUrl}/blog/${slug}`}
+        url={`${siteMetadata.siteUrl}/${category}/${slug}`}
         authorDetails={authorDetails}
         {...frontMatter}
       />
@@ -124,11 +125,11 @@ export default function PostLayout({
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
+                <Link href={discussUrl(slug, category)} rel="nofollow">
                   {'Discuss on Twitter'}
                 </Link>
                 {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
+                <Link href={editUrl(fileName, category)}>{'View on GitHub'}</Link>
               </div>
               <Comments frontMatter={frontMatter} />
             </div>
@@ -154,7 +155,7 @@ export default function PostLayout({
                           Previous Article
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
+                          <Link href={`/${category}/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </div>
                     )}
@@ -173,10 +174,10 @@ export default function PostLayout({
               </div>
               <div className="pt-4 xl:pt-8">
                 <Link
-                  href="/blog"
+                  href={`/${category}`}
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  &larr; Back to the blog
+                  &larr; Back to the {category}
                 </Link>
               </div>
             </footer>
