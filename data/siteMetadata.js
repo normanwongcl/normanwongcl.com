@@ -6,7 +6,7 @@ const siteMetadata = {
     'I am a Malaysian web developer focusing on React.js, Next.js, JavaScript and TypeScript. I have 2+ years work experience in various IT roles in start-ups and small to medium organisations. My goal right now is to improve my craft and build quality software applications.',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://normanwongcl.com',
+  siteUrl: 'https://www.normanwongcl.com',
   siteRepo: 'https://github.com/normanwongcl/normanwongcl.com',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
