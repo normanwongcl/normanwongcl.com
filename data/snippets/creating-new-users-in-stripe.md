@@ -1,7 +1,7 @@
 ---
 title: 'How to automatically create a new customer account in Stripe using firestore trigger'
-date: '2022-02-28'
-lastmod: '2022-02-28'
+date: '2022-03-1'
+lastmod: '2022-03-1'
 tags: ['javascript', 'firestore', 'firebase', 'stripe']
 category: 'snippets'
 draft: false
