@@ -16,13 +16,14 @@ import * as functions from 'firebase-functions'
 // As an admin, the app has read and write access to all data,
 // regardless of Security Rules
 const db = admin.firestore()
+const regionId = 'asia-southeast1'
 
 /**
  * Firestore trigger that update all documents in another collection
  * that consist of the product id when the product is updated
  */
 export const dbTriggerToUpdateAllDocuments = functions
-  .region(process.env.REGION)
+  .region(regionId)
   .firestore.document(`products/{productId}`) // the document to watch
   .onUpdate(async (snap, context) => {
     try {
