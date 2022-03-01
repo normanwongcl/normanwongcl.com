@@ -22,3 +22,4 @@ This a personal blog and portfolio website made with [Next.js](https://nextjs.or
 
 - Added visualization for data fetched from Github API.
 - Added views counter to count number of page views from individual blog posts
+- Added a snippet page for code snippets

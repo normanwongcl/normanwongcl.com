@@ -5,7 +5,7 @@ lastmod: '2022-02-28'
 tags: ['javascript', 'firestore', 'firebase']
 category: 'snippets'
 draft: false
-summary: Using firestore trigger to update multiple documents within another collection, when the value of a field changes in a document.
+summary: Update multiple documents when a field in a document changed
 authors: ['default']
 ---
 
@@ -40,15 +40,17 @@ export const dbTriggerToUpdateAllDocuments = functions
             })
           })
         })
-    } catch (e) {
-      console.error(e)
+    } catch (error) {
+      console.error('Failed to update user bookings:', error.message)
     }
   })
 ```
 
 # Introduction
 
-Here's a scenario where this code snippet is useful.
+This code snippet can be customized to use a different collection as a source and update multiple documents of whatever collection you want.
+
+I will explain the code snippet and its usage using the following scenario:
 
 Let's said that you have a few users, who had booked "ABC Training" on your website. "ABC Training" data came from a product document in the "products" collection, and the new booking data is stored in a collection called "bookingHistory".
 
@@ -59,5 +61,3 @@ Now, your "ABC Training" product in your products document have the **new data**
 But your users still have **stale data** (old data) in their "bookingHistory" collection.
 
 In order to update all of the user bookings for "ABC Training", you need a write a cloud function to watch for an "update" event on the "products" collection.
-
-This code snippet can be customized to use a different collection and update multiple documents of whatever collection you want.
