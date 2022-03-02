@@ -38,7 +38,7 @@ export type contactFormData = {
 Then, add the following logic in your contact page for handling form submission.
 
 ```ts
-const onSubmit = async (data: ContactData) => {
+const onSubmit = async (data: ContactFormData) => {
   // ...logic to set isLoading that you can set up
 
   // send the contact form data to the api
