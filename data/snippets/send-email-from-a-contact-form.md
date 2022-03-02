@@ -5,24 +5,76 @@ lastmod: '2022-03-01'
 tags: ['typescript', 'next.js', 'sendgrid']
 category: 'snippets'
 draft: false
-summary: Code snippet showing you how to santize form data and sending an email using SendGrid API.
+summary: Code snippet showing you how to sanitize form data and sending an email using SendGrid API.
 authors: ['default']
 ---
 
+# Introduction
+
+In this article, I will show you how to sanitize your contact form data and send an email using SendGrid API in your Next.js project.
+
+First, try to create a contact form similar to the one below.
+
+![Picture of Contact Us Form](/public/static/images/contact-us-form.png)
+
+We'll have 4 fields:
+
+- Name (the name of the person who is sending the email)
+- Email (the email of the person who is sending the email)
+- Subject (The title of the email that we see when we open our email client: gmail, outlook, etc)
+- Message (The message send to us)
+
 ```ts
-import sendgrid from '@sendgrid/mail'
-import createDOMPurify from 'dompurify'
-import { JSDOM } from 'jsdom'
-import { NextApiRequest, NextApiResponse } from 'next'
-
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
-
-type contactFormData = {
+// Contact form data types for readers who are using TypeScript
+// Skip this code for those using JavaScript
+export type contactFormData = {
   name: string
   email: string
   subject: string
   message: string
 }
+```
+
+Then, add the following logic in your contact page for handling form submission.
+
+```ts
+const onSubmit = async (data: ContactData) => {
+  // ...logic to set isLoading that you can set up
+
+  // send the contact form data to the api
+  await fetch('/api/contact', {
+    body: JSON.stringify({
+      email: data.email,
+      name: data.name,
+      subject: data.subject,
+      message: data.message,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'POST',
+  })
+    .then(() => {
+      // ...logic to set isLoading, provide success message and reset form
+    })
+    .catch((err) => {
+      // ...logic to set isLoading, provide error message and reset form
+    })
+}
+```
+
+Now, we can create our api endpoint to handle the form submission.
+
+```ts
+// In your Next.js project. Place this file in the pages/api folder. Name it contact.ts
+import createDOMPurify from 'dompurify'
+import { JSDOM } from 'jsdom'
+import { NextApiRequest, NextApiResponse } from 'next'
+import { contactFormData } from 'types/contactFormData'
+
+import sendgrid from '@sendgrid/mail'
+
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
 
 async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
   const { name, email, subject, message } = req.body as contactFormData
@@ -40,7 +92,7 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
   // Replace all new line in message with <br>
   const formattedMessage = cleanMessage.replace(/(?:\r\n|\r|\n)/g, '<br>')
 
-  // Create email template
+  // Create email template. You can use https://stripo.email/ to generate your own email template
   const emailTemplate = (name: string, email: string, subject: string, message: string): string => {
     return `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
@@ -130,7 +182,7 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
 
   try {
     await sendgrid.send({
-      to: 'myEmail@outlook.com', // Your email where you'll receive emails
+      to: 'myemail@outlook.com', // Your email where you'll receive emails
       from: 'contact@domain.com', // Your website email address here
       subject: `[Contact Form] - ${cleanSubject}`,
       html: emailTemplate(cleanName, cleanEmail, cleanSubject, formattedMessage),
@@ -142,4 +194,20 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
 }
 
 export default sendEmail
+```
+
+Now, test your contact form by copy pasting the message to your message field.
+
+```
+It's been a year since you joined our team.
+You had your ups and downs. But I am extremely happy you are one of us.
+
+It's been a nice year together. You showed yourself as a skilled professional.
+
+We hope to have a long-term relationship with you.
+
+Regards,
+Norman Wong
+<img src="http://unsplash.it/100/100?random" onload="alert('you got hacked');" />
+<script>window.open(`http://normanwongcl.com`)</script>
 ```
