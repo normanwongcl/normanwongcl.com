@@ -18,7 +18,7 @@ const regionId = 'asia-southeast1'
 const usersCollection = 'users'
 const stripe = new Stripe(stripeSecretKey, { apiVersion: '2020-08-27' })
 
-// define a userData object
+// define a UserData object
 class UserData {
   constructor(email, name) {
     this.email = email ?? 'No email given'
