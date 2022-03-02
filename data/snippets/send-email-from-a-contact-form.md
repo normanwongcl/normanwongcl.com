@@ -1,7 +1,7 @@
 ---
 title: 'Writing an api in Next.js to send an email from a contact form'
-date: '2022-03-01'
-lastmod: '2022-03-01'
+date: '2022-03-02'
+lastmod: '2022-03-02'
 tags: ['typescript', 'next.js', 'sendgrid']
 category: 'snippets'
 draft: false
