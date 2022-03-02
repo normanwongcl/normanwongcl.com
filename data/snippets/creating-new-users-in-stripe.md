@@ -18,13 +18,20 @@ const regionId = 'asia-southeast1'
 const usersCollection = 'users'
 const stripe = new Stripe(stripeSecretKey, { apiVersion: '2020-08-27' })
 
+// define a userData object
+class UserData {
+  constructor(email, name) {
+    this.email = email ?? 'No email given'
+    this.name = name ?? 'No name given'
+  }
+}
+
 /**
  * Create a new customer in Stripe when a user document is created.
  */
 const createUserRecord = async ({ email, name, uid }) => {
   try {
-    if (email) userData.email = email
-    if (name) userData.name = name
+    const userData = new UserData(email, name)
 
     // Create a new customer in Stripe.
     const customer = await stripe.customers.create(userData)
