@@ -24,7 +24,7 @@ const stripe = new Stripe(stripeSecretKey, { apiVersion: '2020-08-27' })
 const createUserRecord = async ({ email, name, uid }) => {
   try {
     if (email) userData.email = email
-    if (displayName) userData.name = name
+    if (name) userData.name = name
 
     // Create a new customer in Stripe.
     const customer = await stripe.customers.create(userData)
