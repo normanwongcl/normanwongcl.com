@@ -60,12 +60,12 @@ Let's said that you have a few users, who had booked "ABC Training" on your webs
 
 Your business admin recently decided to updated the trainers who will be teaching "ABC Training" course.
 
-![Admin form](/public/static/images/admin-form.png)
+![Admin form](/static/images/admin-form.png)
 
 Now, the "ABC Training" data in your products document have the **new data** entered by the admin.
 
 But your users still have **stale data** (old data), where originally, the trainer was set to **Van** in their "bookingHistory" collection, as seen in the picture below.
 
-![User booking data](/public/static/images/user-booking-example.png)
+![User booking data](/static/images/user-booking-example.png)
 
 In order to update all of the user bookings for "ABC Training", you need to write a cloud function to watch for an "update" event on the "products" collection.

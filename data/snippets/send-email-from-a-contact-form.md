@@ -15,7 +15,7 @@ In this article, I will show you how to sanitize your contact form data and send
 
 First, try to create a contact form similar to the one below.
 
-![Picture of Contact Us Form](/public/static/images/contact-us-form.png)
+![Picture of Contact Us Form](/static/images/contact-us-form.png)
 
 We'll have 4 fields:
 
@@ -211,3 +211,9 @@ Norman Wong
 <img src="http://unsplash.it/100/100?random" onload="alert('you got hacked');" />
 <script>window.open(`http://normanwongcl.com`)</script>
 ```
+
+In your inbox, you will see your email.
+
+![Sanitised Email](/static/images/sanitised-email.png)
+
+Congrats for finishing the tutorial! Any feedback or suggestion is welcome.
