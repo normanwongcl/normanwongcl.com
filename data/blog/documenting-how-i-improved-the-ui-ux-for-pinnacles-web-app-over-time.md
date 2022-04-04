@@ -18,3 +18,5 @@ This article served as a personal log of my experience with improving the UI/UX 
 The sample of my work process for this project can be seen in the link provided:
 
 [Link to work sample](https://www.figma.com/file/vgiui8BoUz33BpUgYjRB9M/Pinnacles-UI-Improvement?node-id=0%3A1)
+
+Last updated: April 4, 2022
